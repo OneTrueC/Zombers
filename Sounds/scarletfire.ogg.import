@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/scarletfire.ogg-e52579524e8ae81e8988eb936d4313c6.oggstr"
+
+[deps]
+
+source_file="res://Sounds/scarletfire.ogg"
+dest_files=[ "res://.import/scarletfire.ogg-e52579524e8ae81e8988eb936d4313c6.oggstr" ]
+
+[params]
+
+loop=true
+loop_offset=0
