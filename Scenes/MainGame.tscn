@@ -1,4 +1,4 @@
-[gd_scene load_steps=6 format=2]
+[gd_scene load_steps=10 format=2]
 
 [ext_resource path="res://Textures/bg.png" type="Texture" id=1]
 [ext_resource path="res://Textures/trump.png" type="Texture" id=2]
@@ -6,6 +6,18 @@
 [ext_resource path="res://Sounds/216.ogg" type="AudioStream" id=4]
 
 [sub_resource type="RectangleShape2D" id=1]
+extents = Vector2( 1031.47, 107.673 )
+
+[sub_resource type="RectangleShape2D" id=2]
+extents = Vector2( 44.356, 631.521 )
+
+[sub_resource type="RectangleShape2D" id=3]
+extents = Vector2( 985.145, 10 )
+
+[sub_resource type="RectangleShape2D" id=4]
+extents = Vector2( 10, 567.376 )
+
+[sub_resource type="RectangleShape2D" id=5]
 extents = Vector2( 55, 55 )
 
 [node name="MainGame" type="Node2D"]
@@ -28,6 +40,22 @@ polygon = PoolVector2Array( -726, 94, -734, 83, -748, 84, -770, 85, -786, 84, -8
 [node name="CollisionPolygon2D4" type="CollisionPolygon2D" parent="Enviornment"]
 polygon = PoolVector2Array( 544, 139, 540, 125, 531, 124, 514, 123, 496, 123, 492, 124, 475, 127, 454, 127, 435, 128, 425, 127, 416, 131, 411, 138, 412, 150, 416, 168, 420, 189, 423, 204, 422, 221, 421, 247, 422, 266, 422, 288, 425, 313, 427, 331, 431, 350, 431, 368, 431, 399, 433, 433, 435, 450, 438, 479, 442, 503, 451, 514, 470, 517, 495, 512, 534, 508, 569, 508, 611, 510, 642, 512, 669, 513, 687, 517, 702, 518, 707, 517, 736, 517, 750, 518, 762, 519, 786, 519, 818, 518, 846, 512, 860, 509, 867, 510, 875, 506, 878, 500, 878, 494, 875, 488, 873, 468, 874, 460, 873, 435, 878, 403, 878, 373, 880, 359, 876, 334, 878, 276, 874, 264, 876, 248, 872, 228, 873, 206, 871, 193, 872, 175, 869, 162, 872, 156, 870, 140, 854, 130, 821, 128, 789, 130, 757, 131, 714, 131, 707, 134, 704, 140, 706, 149, 712, 154, 735, 155, 764, 154, 782, 155, 815, 153, 845, 155, 846, 204, 847, 239, 850, 245, 850, 272, 851, 281, 851, 310, 850, 326, 851, 333, 852, 346, 855, 359, 853, 364, 852, 377, 852, 386, 853, 394, 852, 404, 850, 419, 848, 438, 848, 458, 850, 485, 829, 491, 805, 494, 771, 493, 757, 494, 748, 492, 733, 492, 717, 492, 699, 492, 692, 492, 668, 487, 642, 487, 602, 484, 573, 484, 532, 484, 503, 483, 497, 485, 493, 486, 484, 486, 464, 491, 465, 473, 462, 464, 460, 441, 459, 427, 456, 414, 457, 394, 458, 363, 456, 339, 452, 319, 447, 298, 449, 269, 447, 238, 449, 194, 439, 151, 497, 150, 505, 149, 537, 148 )
 
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Enviornment"]
+position = Vector2( 3.5636, -648.574 )
+shape = SubResource( 1 )
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="Enviornment"]
+position = Vector2( 1004.93, 7.12714 )
+shape = SubResource( 2 )
+
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="Enviornment"]
+position = Vector2( -19.5999, 550.575 )
+shape = SubResource( 3 )
+
+[node name="CollisionShape2D4" type="CollisionShape2D" parent="Enviornment"]
+position = Vector2( -971.08, 8.90894 )
+shape = SubResource( 4 )
+
 [node name="Camera2D" type="Camera2D" parent="."]
 __meta__ = {
 "_editor_description_": ""
@@ -40,7 +68,7 @@ size = Vector2( 1920, 1080 )
 script = ExtResource( 3 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Player"]
-shape = SubResource( 1 )
+shape = SubResource( 5 )
 
 [node name="Trump" type="Sprite" parent="Player/CollisionShape2D"]
 texture = ExtResource( 2 )
