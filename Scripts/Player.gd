@@ -2,7 +2,12 @@ extends KinematicBody2D
 
 export (int) var speed = 200
 
+var score = 0;
+
 var velocity = Vector2()
+
+func _process(_delta):
+	print(score);
 
 func get_input():
 	velocity = Vector2()
@@ -16,6 +21,8 @@ func get_input():
 		velocity.y -= 1
 	velocity = velocity.normalized() * speed
 
-func _physics_process(delta):
+func _physics_process(_delta):
 	get_input()
 	velocity = move_and_slide(velocity)
+	
+
