@@ -13,7 +13,7 @@ onready var colect = preload("res://Prefabs/Collectible.tscn");
 func _ready():
 	pass # Replace with function body.
 
-func _process(delta):
+func _process(_delta):
 	dtl+=1;
 	if (int(dtl)%20==1):
 		get_tree().get_root().add_child(colect.instance());
